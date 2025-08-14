@@ -12,6 +12,10 @@ app.listen(port, () => {
 const bodyParser = require('body-parser')
 app.use(bodyParser.json());
 
+app.get('/', function (req, res) {
+    res.send('Welcome to our Hotel');
+})
+
 const personRoutes = require('./routes/personRoutes');
 app.use('/person',personRoutes);   //hits person and executes in the router file
 
