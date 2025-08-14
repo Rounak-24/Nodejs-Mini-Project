@@ -8,10 +8,12 @@ const   mongoURL = MONGODB_URL_LOCAL;
 
 
 //connection making 
-mongoose.connect(mongoURL,{
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-})
+mongoose.connect(mongoURL, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+    }).catch((error) => {
+    console.error('Error connecting to MongoDB:', error);
+});
 
 const db = mongoose.connection;
 
