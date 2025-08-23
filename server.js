@@ -31,7 +31,7 @@ app.get('/', function (req, res) {
 })
 
 const personRoutes = require('./routes/personRoutes');
-app.use('/person',localAuthmiddleware, personRoutes);   //hits person and executes in the router file
+app.use('/person', personRoutes);   //hits person and executes in the router file
 
 const menuItemRoutes = require('./routes/menuItemRoutes');
 app.use('/menuItem',menuItemRoutes);
