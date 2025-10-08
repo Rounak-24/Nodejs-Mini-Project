@@ -15,7 +15,7 @@ router.post('/signup', async (req,res)=>{
 		console.log("data saved");
 
 		const payload = {
-			id : response.id,
+			id : response._id,
 			username: response.username
 		};
 
